@@ -28,4 +28,14 @@ public class PhoneBookTest {
         phoneBook.add("Lana Bee", "89181231234");
         assertEquals("89181231234", phoneBook.findByName("Lana Bee"));
     }
+
+    @Test
+    public void testPrintAllNames() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Lana Bee", "89181231234");
+        phoneBook.add("Anna Austin", "89189876543");
+        assertNotNull(phoneBook.printAllNames());
+        assertTrue(phoneBook.printAllNames().contains("Lana Bee"));
+        assertTrue(phoneBook.printAllNames().contains("Anna Austin"));
+    }
 }

@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class PhoneBook {
 
@@ -25,5 +26,9 @@ public class PhoneBook {
 
     public String findByName(String name) {
         return contacts.get(name);
+    }
+
+    public String printAllNames() {
+        return String.join(", ", contacts.keySet());
     }
 }
